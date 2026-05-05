@@ -1,280 +1,356 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <header class="header">
-    <nav class="navbar">
-      <!-- Left: Logo -->
-      <a class="navbar__logo" href="#">
-        <img class="navbar__logo-img" src="assets/icons/logo.svg" alt="Site Logo" />
-      </a>
-
-      <!-- Center: Menu Links -->
-      <ul class="navbar__list">
-        <li class="navbar__item navbar__item--dropdown">
-          <a class="navbar__link navbar__link--active" href="#">Ürünler <span
-              class="navbar__dropdown-arrow">▼</span></a>
-          <ul class="navbar__dropdown-menu">
-            <li><a href="#" class="navbar__dropdown-link">Mercimekler</a></li>
-            <li><a href="#" class="navbar__dropdown-link">Fasulyeler</a></li>
-            <li><a href="#" class="navbar__dropdown-link">Nohut & Bezelye</a></li>
-            <li><a href="#" class="navbar__dropdown-link">Özel Baklagiller</a></li>
-          </ul>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Hakkında</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">İletişim</a>
-        </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Tarifler</a>
-        </li>
-      </ul>
-
-      <!-- Right: Search, Cart and User Actions -->
-      <div class="navbar__actions">
-        <!-- Search Box -->
-        <div class="navbar__search">
-          <img class="navbar__search-icon" src="assets/icons/search.svg" alt="Ara" />
-          <input class="navbar__search-input" type="text" placeholder="Search..." />
-        </div>
-
-        <!-- Cart -->
-        <a class="navbar__cart" href="#">
-          <img class="navbar__cart-icon" src="assets/icons/shopping_cart.svg" alt="Sepet" />
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <!-- Left: Logo -->
+        <a class="navbar__logo" href="#">
+          <img
+            class="navbar__logo-img"
+            src="assets/icons/logo.svg"
+            alt="Site Logo"
+          />
         </a>
 
-        <!-- Authentication (Far Right) -->
-        <div class="navbar__auth">
-          <a class="navbar__auth-link" href="#">Giriş Yap</a>
-          <a class="navbar__auth-btn" href="#">Üye Ol</a>
-        </div>
-      </div>
-    </nav>
-  </header>
+        <!-- Center: Menu Links -->
+        <ul class="navbar__list">
+          <li class="navbar__item navbar__item--dropdown">
+            <a class="navbar__link navbar__link--active" href="#"
+              >Ürünler <span class="navbar__dropdown-arrow">▼</span></a
+            >
+            <ul class="navbar__dropdown-menu">
+              <li><a href="#" class="navbar__dropdown-link">Mercimekler</a></li>
+              <li><a href="#" class="navbar__dropdown-link">Fasulyeler</a></li>
+              <li>
+                <a href="#" class="navbar__dropdown-link">Nohut & Bezelye</a>
+              </li>
+              <li>
+                <a href="#" class="navbar__dropdown-link">Özel Baklagiller</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Hakkında</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">İletişim</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="#">Tarifler</a>
+          </li>
+        </ul>
 
-  <main>
-    <!-- Banner Section -->
-    <section class="banner">
-      <div class="banner__inner">
-        <img class="banner__image" src="assets/banner-large.png" srcset="assets/banner-small.png 600w,
-                  assets/banner-large.png 1200w" sizes="(max-width: 600px) 100vw,
-                 1110px" alt="Doğal ve taze tahıl ürünlerimizi keşfedin - Organik tarım alanından bir görünüm" />
-        <div class="banner__overlay">
-          <div class="banner__content-box">
-            <h1 class="banner__title">Her tanede<br>doğa var</h1>
-            <p class="banner__desc">Anadolu'nun bereketli topraklarından sofranıza uzanan, katkısız ve tamamen organik
-              lezzetler.</p>
-            <a href="#" class="banner__btn">Tüm Ürünler</a>
+        <!-- Right: Search, Cart and User Actions -->
+        <div class="navbar__actions">
+          <!-- Search Box -->
+          <div class="navbar__search">
+            <img
+              class="navbar__search-icon"
+              src="assets/icons/search.svg"
+              alt="Ara"
+            />
+            <input
+              class="navbar__search-input"
+              type="text"
+              placeholder="Search..."
+            />
+          </div>
+
+          <!-- Cart -->
+          <a class="navbar__cart" href="#">
+            <img
+              class="navbar__cart-icon"
+              src="assets/icons/shopping_cart.svg"
+              alt="Sepet"
+            />
+          </a>
+
+          <!-- Authentication (Far Right) -->
+          <div class="navbar__auth">
+            <a class="navbar__auth-link" href="#">Giriş Yap</a>
+            <a class="navbar__auth-btn" href="#">Üye Ol</a>
           </div>
         </div>
-      </div>
-    </section>
+      </nav>
+    </header>
 
-    <!-- Products Title -->
-    <h2 class="section-title">Ürünlerimiz</h2>
-
-    <!-- Cards Section -->
-    <section class="cards">
-      <!-- Card 1 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/kirmizi_mercimek.png" alt="Kırmızı Mercimek" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">Kırmızı Mercimek</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺45.90</span>
-              <span class="card__unit">/ kg</span>
+    <main>
+      <!-- Banner Section -->
+      <section class="banner">
+        <div class="banner__inner">
+          <img
+            class="banner__image"
+            src="assets/banner-large.png"
+            srcset="assets/banner-small.png 600w, assets/banner-large.png 1200w"
+            sizes="(max-width: 600px) 100vw,
+                 1110px"
+            alt="Doğal ve taze tahıl ürünlerimizi keşfedin - Organik tarım alanından bir görünüm"
+          />
+          <div class="banner__overlay">
+            <div class="banner__content-box">
+              <h1 class="banner__title">Her tanede<br />doğa var</h1>
+              <p class="banner__desc">
+                Anadolu'nun bereketli topraklarından sofranıza uzanan, katkısız
+                ve tamamen organik lezzetler.
+              </p>
+              <a href="#" class="banner__btn">Tüm Ürünler</a>
             </div>
           </div>
         </div>
-      </article>
+      </section>
 
-      <!-- Card 2 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/yesil_mercimek.png" alt="Yeşil Mercimek" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">Yeşil Mercimek</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺52.50</span>
-              <span class="card__unit">/ kg</span>
+      <!-- Products Title -->
+      <h2 class="section-title">Ürünlerimiz</h2>
+
+      <!-- Cards Section -->
+      <section class="cards">
+        <!-- Card 1 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/kirmizi_mercimek.png"
+            alt="Kırmızı Mercimek"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">Kırmızı Mercimek</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺45.90</span>
+                <span class="card__unit">/ kg</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 3 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/nohut.png" alt="Nohut" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">Nohut</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺39.90</span>
-              <span class="card__unit">/ kg</span>
+        <!-- Card 2 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/yesil_mercimek.png"
+            alt="Yeşil Mercimek"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">Yeşil Mercimek</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺52.50</span>
+                <span class="card__unit">/ kg</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 4 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/fasulye.png" alt="Kuru Fasulye" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">Kuru Fasulye</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺48.00</span>
-              <span class="card__unit">/ kg</span>
+        <!-- Card 3 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/nohut.png"
+            alt="Nohut"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">Nohut</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺39.90</span>
+                <span class="card__unit">/ kg</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 5 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/barbunya.png" alt="Barbunya" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">Barbunya</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺55.00</span>
-              <span class="card__unit">/ kg</span>
+        <!-- Card 4 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/fasulye.png"
+            alt="Kuru Fasulye"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">Kuru Fasulye</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺48.00</span>
+                <span class="card__unit">/ kg</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 6 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/borulce.png" alt="Börülce" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">Börülce</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺42.50</span>
-              <span class="card__unit">/ kg</span>
+        <!-- Card 5 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/barbunya.png"
+            alt="Barbunya"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">Barbunya</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺55.00</span>
+                <span class="card__unit">/ kg</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 7 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/ic_bakla.png" alt="Bakla" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">İç Bakla</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺35.00</span>
-              <span class="card__unit">/ kg</span>
+        <!-- Card 6 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/borulce.png"
+            alt="Börülce"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">Börülce</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺42.50</span>
+                <span class="card__unit">/ kg</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 8 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/soya_fasulyesi.png" alt="Soya Fasulyesi" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">Soya Fasulyesi</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺60.00</span>
-              <span class="card__unit">/ kg</span>
+        <!-- Card 7 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/ic_bakla.png"
+            alt="Bakla"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">İç Bakla</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺35.00</span>
+                <span class="card__unit">/ kg</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 9 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/bulgur.png" alt="Bulgur" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">Pilavlık Bulgur</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺25.00</span>
-              <span class="card__unit">/ kg</span>
+        <!-- Card 8 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/soya_fasulyesi.png"
+            alt="Soya Fasulyesi"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">Soya Fasulyesi</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺60.00</span>
+                <span class="card__unit">/ kg</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 10 -->
-      <article class="card">
-        <img class="card__image" loading="lazy" src="assets/pirinc.png" alt="Pirinç" />
-        <div class="card__content">
-          <div class="card__rating">
-            <span class="card__star">★</span> 4.8 / 5
-          </div>
-          <p class="card__subtitle">Doğal & Katkısız</p>
-          <h3 class="card__name">Osmancık Pirinç</h3>
-          <div class="card__footer">
-            <button class="card__add-btn">Ekle +</button>
-            <div class="card__price-box">
-              <span class="card__price">₺40.00</span>
-              <span class="card__unit">/ kg</span>
+        <!-- Card 9 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/bulgur.png"
+            alt="Bulgur"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">Pilavlık Bulgur</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺25.00</span>
+                <span class="card__unit">/ kg</span>
+              </div>
             </div>
           </div>
-        </div>
-      </article>
-    </section>
-  </main>
-</body>
+        </article>
 
+        <!-- Card 10 -->
+        <article class="card">
+          <img
+            class="card__image"
+            loading="lazy"
+            src="assets/pirinc.png"
+            alt="Pirinç"
+          />
+          <div class="card__content">
+            <div class="card__rating">
+              <span class="card__star">★</span> 4.8 / 5
+            </div>
+            <p class="card__subtitle">Doğal & Katkısız</p>
+            <h3 class="card__name">Osmancık Pirinç</h3>
+            <div class="card__footer">
+              <button class="card__add-btn">Ekle +</button>
+              <div class="card__price-box">
+                <span class="card__price">₺40.00</span>
+                <span class="card__unit">/ kg</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
